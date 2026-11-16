@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import StudentLayout from "./components/student/StudentLayout";
-import Dashboard from "./pages/student/Dashboard";
-import VehicleRegistration from "./pages/student/VehicleRegistration";
-import CampusParking from "./pages/student/CampusParking";
-import ApplicationStatus from "./pages/student/ApplicationStatus";
+import Dashboard from "./pages/student/dashboard/Dashboard";
+import VehicleRegistration from "./pages/student/vehicle-registration/VehicleRegistration";
+import CampusParking from "./pages/student/campus-parking/CampusParking";
+import ApplicationStatus from "./pages/student/application-status/ApplicationStatus";
 import Home from "./pages/Home";
-import Login from "./pages/auth/Login";
-import Register from "./pages/auth/Register";
+import Login from "./pages/auth/login/Login";
+import Register from "./pages/auth/register/Register";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/admin/ProtectedRoute";
 import AdminLogin from "./pages/admin/login/AdminLogin";
