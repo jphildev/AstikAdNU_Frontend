@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router'
-import campusMap from '../../assets/campus-map.png'
+import campusMap from '../../../assets/campus-map.png'
 import './CampusParking.css'
 
 // Sample occupancy until the parking endpoints exist.

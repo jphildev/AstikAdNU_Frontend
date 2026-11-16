@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
-import BrandPanel from '../../components/auth/BrandPanel.jsx'
-import PasswordField from '../../components/auth/PasswordField.jsx'
-import './Auth.css'
+import BrandPanel from '../../../components/auth/BrandPanel.jsx'
+import PasswordField from '../../../components/auth/PasswordField.jsx'
+import '../Auth.css'
 
 export default function Login() {
   const navigate = useNavigate()
