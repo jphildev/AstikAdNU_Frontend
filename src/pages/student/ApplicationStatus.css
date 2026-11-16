@@ -1,0 +1,296 @@
+.as-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.as-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.as-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.as-card h2 {
+  margin: 0;
+  color: #1e2228;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.as-card :where(p) {
+  margin: 0;
+}
+
+/* Summary */
+.as-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.as-label {
+  color: #5f6e85;
+  font-size: 13px;
+}
+
+.as-reference {
+  margin-top: 4px;
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.as-date {
+  margin-top: 4px;
+  color: #5f6e85;
+  font-size: 13px;
+}
+
+.as-status {
+  padding: 6px 16px;
+  border-radius: 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+}
+
+.as-status-approved {
+  background: #1f7a4d;
+}
+
+.as-status-rejected {
+  background: var(--red);
+}
+
+/* Progress steps */
+.as-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.as-step {
+  position: relative;
+  padding-right: 12px;
+}
+
+.as-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  right: 8px;
+  height: 2px;
+  background: var(--border);
+}
+
+.as-step-done:not(:last-child)::after {
+  background: var(--primary);
+}
+
+.as-step-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.as-step-done .as-step-marker {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.as-step-current .as-step-marker {
+  border-color: var(--gold);
+  color: #1e2228;
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
+}
+
+.as-step-title {
+  margin-top: 12px;
+  color: #1e2228;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.as-step-upcoming .as-step-title {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.as-step-text {
+  margin-top: 4px;
+  color: #5f6e85;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* Details */
+.as-details {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0 0;
+}
+
+.as-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.as-details dt {
+  color: #5f6e85;
+}
+
+.as-details dd {
+  margin: 0;
+  color: #1e2228;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Requirements */
+.as-requirements {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.as-requirements li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #1e2228;
+}
+
+.as-req {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.as-req-ok {
+  background: #e6f2ec;
+  color: #1f7a4d;
+}
+
+.as-req-missing {
+  background: #f8e8ec;
+  color: var(--red);
+}
+
+/* Next steps */
+.as-next {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.as-next h2 {
+  color: #fff;
+}
+
+.as-next p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* Empty state */
+.as-empty {
+  text-align: center;
+}
+
+.as-empty p {
+  margin: 8px 0 20px;
+  color: #5f6e85;
+  font-size: 15px;
+}
+
+.as-button {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.as-button:hover {
+  background: var(--navy);
+}
+
+.as-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .as-stack,
+  .as-grid {
+    gap: 16px;
+  }
+
+  .as-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .as-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .as-step {
+    display: flex;
+    gap: 14px;
+    padding-right: 0;
+  }
+
+  .as-step:not(:last-child)::after {
+    top: 40px;
+    bottom: -16px;
+    left: 15px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .as-step-marker {
+    flex-shrink: 0;
+  }
+
+  .as-step-title {
+    margin-top: 5px;
+  }
+}
