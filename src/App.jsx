@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import StudentLayout from "./components/student/StudentLayout";
 import Dashboard from "./pages/student/Dashboard";
 import VehicleRegistration from "./pages/student/VehicleRegistration";
+import CampusParking from "./pages/student/CampusParking";
 import ApplicationStatus from "./pages/student/ApplicationStatus";
 import Home from "./pages/Home";
 import Login from "./pages/auth/Login";
@@ -27,6 +28,7 @@ export default function App() {
           <Route element={<StudentLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/vehicle-registration" element={<VehicleRegistration />} />
+            <Route path="/campus-parking" element={<CampusParking />} />
             <Route path="/application-status" element={<ApplicationStatus />} />
           </Route>
           <Route path="/admin" element={<Navigate to="/admin/login" replace />} />

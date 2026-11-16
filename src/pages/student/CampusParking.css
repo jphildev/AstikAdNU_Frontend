@@ -1,0 +1,243 @@
+.cp-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cp-header h1 {
+  color: #14284b;
+  font-size: 26px;
+}
+
+.cp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid #c7d6ed;
+  border-radius: 16px;
+  background: #f6f9fd;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cp-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+/* Map card */
+.cp-card {
+  padding: 18px 18px 24px;
+  border: 1px solid #dce5f1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(20, 40, 75, 0.06);
+}
+
+.cp-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cp-card-head h2 {
+  margin: 0;
+  color: #14284b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cp-card-head p {
+  margin: 4px 0 0;
+  color: #5f6e85;
+  font-size: 13px;
+}
+
+.cp-legend {
+  display: flex;
+  gap: 16px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #5f6e85;
+  font-size: 13px;
+}
+
+.cp-legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cp-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.cp-swatch-vacant {
+  background: var(--primary);
+}
+
+.cp-swatch-occupied {
+  background: #dce5f1;
+}
+
+.cp-map {
+  position: relative;
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid #dce5f1;
+  border-radius: 12px;
+}
+
+.cp-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Lot pins: the tip of the stem sits on (left, top). */
+.cp-pin {
+  position: absolute;
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--primary);
+  box-shadow: 0 2px 6px rgba(20, 40, 75, 0.3);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transform: translate(-50%, calc(-100% - 6px));
+}
+
+.cp-pin::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 6px;
+  background: inherit;
+  transform: translateX(-50%);
+}
+
+.cp-pin:hover {
+  background: var(--navy);
+}
+
+.cp-pin:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.cp-pin-full {
+  background: #dce5f1;
+  color: #14284b;
+}
+
+.cp-pin-full:hover {
+  background: #c7d6ed;
+}
+
+.cp-map-note {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #5f6e85;
+  font-size: 11px;
+}
+
+.cp-map-note-left {
+  left: 0;
+  border-top-right-radius: 6px;
+}
+
+.cp-map-note-right {
+  right: 0;
+  border-top-left-radius: 6px;
+}
+
+.cp-back {
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cp-back:hover {
+  text-decoration: underline;
+}
+
+.cp-back:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Stats */
+.cp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cp-stat {
+  min-width: 0;
+  padding: 18px 16px;
+  border: 1px solid #dce5f1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cp-stat h2 {
+  margin: 0;
+  color: #5f6e85;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.cp-stat-value {
+  margin: 10px 0 0;
+  color: #14284b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cp-stat-vacant {
+  color: var(--primary);
+}
+
+@media (max-width: 720px) {
+  .cp-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-pin {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .cp-map-note {
+    font-size: 9px;
+  }
+}
